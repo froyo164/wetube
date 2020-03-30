@@ -1,0 +1,11 @@
+//-partials는 페이지의 일부분
+footer.footer
+    .footer__icon
+        //-
+            태그 없이 ID와 CLASS만 선언할시 div 태그를 사용한다. ex) .class == div.class    
+        i.fab.fa-youtube
+            //- <i class="fab fa-youtube"></i>
+    //- footer 라는 태그에 footer라는 클래스를 추가하고 divdpsms footer__icon이라는 클래스를 추가하면 됨
+    span.footer__text #{siteName} #{new Date().getFullYear()} &copy;
+    //- pug에 JS를 넣는 방법
+    //- <span class="footer__text">WeTube 2020 ©

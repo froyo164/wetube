@@ -1,0 +1,27 @@
+header.header   
+    .header__column
+        a(href=routes.home)
+            i.fab.fa-youtube
+    .header__column
+        //-form(action="get")
+            //- url에 있는 값들을 보고 싶음
+        form(action=routes.search, method="get")
+            //-태그의 action 속성은 폼 데이터(form data)를 서버로 보낼 때 해당 데이터가 도착할 URL을 명시합니다.
+            //-<form action="URL">
+            //-서식 데이터(form data)를 서버로 보낼 때 해당 데이터가 도착할 URL
+            //-GET과 POST는 브라우저에서 폼 데이터를 가져와 서버로 보내는 똑같은 기능을 수행
+            //- 컨트롤러도 query에 접근하려면, method 가 get이여야 됨,   get method 가 url에 정보를 추가 해줌 (post method 면 저기 주소에 표시되지 않음)
+            //-action이 어디로 전송할지 정하는거고 method는 post get delete 등등 어떤걸로 보낼지 정하는 겁니당
+            //-방법으로 보내면 서버에서도 get 방법에 해당하는 route가 받는다고 생각하시면 될듯해여
+            input(type="text", placeholder="Search by term...", name="term")
+            //-input 이 입력되면 routes.search 로 이동함
+            //-name 을 설정하지 않으면 ? 가 붙음
+        ul
+            li
+                //- a(href="#") Join
+                a(href=routes.join) Join
+            li
+                //- a(href="#") Log In 
+                a(href=routes.login) Log In 
+                    //- Onesingle source of truth(한 곳에서만 정보를 보관). 더 나은 코드를 만들어주는 원칙
+                    //- 많은 곳에 영향을 주는 하나를 바꾼다면, 그 하나만 바꿔주면 많은 것들이 바뀜

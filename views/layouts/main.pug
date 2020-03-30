@@ -1,0 +1,24 @@
+//- 이 파일은 모든 페이지들의 토대가 되는 파일이 될것
+//- <> 대신에 들여쓰기, tab or 4 spaces
+//- tab 안쪽에 있는 코드라면 무언가의 내부에 있는 코드
+//- Home 화면과 다른 화면의 코드가 모두 main 태그 안에 들어가도록 작업할 것
+//- layout 을 기초로 다른 것 들도 만듦
+//- footer가 없는 화면이라면, 이 레이아웃을 extends 하면 안됨
+
+//-partials는 페이지의 일부분
+doctype html
+html
+    head
+        link(
+      rel="stylesheet", href="https://use.fontawesome.com/releases/v5.7.2/css/all.css", integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr", crossorigin="anonymous")
+      
+        title #{pageTitle} | #{siteName}
+    body
+        include ../partials/header
+        
+        main
+            block content
+            //- block  에 화면의 내용들이 채워짐
+        include ../partials/footer
+            //- ../ 는 바로 위의 디렉토르를 말함, 이런식으로 웹사이트의 분리하고 싶은 부분을 분리 할 수 있음
+            //- footer와 header는 각각 한 곳에만 있어서 더 조직화되었고, 이렇게 여기에 다 모아두는게 더 괜찮아 보임
