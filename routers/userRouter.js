@@ -10,9 +10,9 @@ import {
 const userRouter = express.Router(); //userRouter 을 export함 (default 로 하지 않음)
 
 //userRouter.get(routes.users, users);
-userRouter.get(routes.userDetail, userDetail);
-userRouter.get(routes.editProfile, editProfile);
+userRouter.get(routes.editProfile, editProfile); // 더 위에 있으니까 먼저 인식
 userRouter.get(routes.changePassword, changePassword);
+userRouter.get(routes.userDetail, userDetail);
 
 export default userRouter;
 

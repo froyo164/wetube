@@ -1,8 +1,13 @@
+import { videos } from "../db";
+
 // videoController에 homeController를 추가 함
-export const home = (req, res) => res.render("home", { pageTitle: "Home" });
+export const home = (req, res) => {
+  res.render("home", { pageTitle: "Home", videos });
+};
 // render 함수의 인자로 템플릿 파일의 이름을 입력하면 됨, 두번쩨 인자는 템플릿에 추가 할 정보가 담긴 객체들임
 // 이 함수가 view 폴더에서 파일명이 home 이고 확장자가 pug인 템플릿파일을 찾은후에 보여줌
 //export const home = (req, res) => res.send("Home");
+//home 화면에 접속하면 video 목록을 받아옴 ("home", { pageTitle: "Home", videos }), videos:videos 는 videos 로 줄일 수 있음
 
 export const search = (req, res) => {
   //console.log(req.query); //console.log 를 해서 android (search by term 에 입력했던것) 를 찾음 (req.query 에 있음)

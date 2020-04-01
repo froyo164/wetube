@@ -1,0 +1,13 @@
+//- 웹사이트에서 계속 반복되는 코드를 복붙하지 않고 재활용하는 방법을 mixin 이라고함, mixin은 웹사이트에서 자주 반복되는 html 코드를 담고 있음
+//- html 은 처음부터 작성하지않음
+
+mixin videoBlock(video = {})
+    //- mixin 은 pug 함수의 일종임
+    //- 이 mixin 에 인자가 입력되면, 그 객체의 이름을 video 라고 한 것
+    //- 객체가 mixin 에 입력되면, 그 객체의 title을 받아와서 화면애ㅔ 표시함
+    //- h1=video.title
+    //- p=video.description
+    .videoBlock 
+        video.videoBlock__thumbnail(src=video.videoFile)
+        h4.videoBlock__title=video.title
+        h6.videoBlock__views=video.views

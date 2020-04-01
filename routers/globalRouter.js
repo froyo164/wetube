@@ -8,9 +8,9 @@ const globalRouter = express.Router(); //userRouter 을 export함 (default 로 �
 
 globalRouter.get(routes.home, home);
 //globalRouter.get(routes.home, (req, res) => res.send("Home"));
-globalRouter.get(routes.join, search);
-globalRouter.get(routes.login, join);
-globalRouter.get(routes.logout, login);
+globalRouter.get(routes.join, join);
+globalRouter.get(routes.login, login);
+globalRouter.get(routes.logout, logout);
 globalRouter.get(routes.search, search);
 //export 한 함수들을 (from controller) router에서 import 해서 사용
 

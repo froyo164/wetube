@@ -1,4 +1,4 @@
-export const join = (req, res) => res.render("Join", { pageTitle: "Join" });
+export const join = (req, res) => res.render("join", { pageTitle: "Join" });
 export const login = (req, res) => res.render("login", { pageTitle: "Log In" });
 export const logout = (req, res) =>
   res.render("logout", { pageTitle: "Log Out" });
