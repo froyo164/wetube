@@ -18,7 +18,11 @@ export const search = (req, res) => {
   } = req;
   // 이제 console.log(term); 가능
   //const searchingBy = req.query.term; 위와 같음
-  res.render("search", { pageTitle: "Search", searchingBy: searchingBy });
+  res.render("search", {
+    pageTitle: "Search",
+    searchingBy: searchingBy,
+    video
+  });
 }; // error 아님
 //searchingBy 로 입력되는 값이 여기 위에 있는 searchingBy 의 값과 같다고 자동 인식
 //search 화면 컨트롤러가 여기 있음. 이제는 암시적 리턴을 사용 할수 없음

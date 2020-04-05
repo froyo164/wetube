@@ -1,5 +1,16 @@
 extends layouts/main
+include mixins/videoBlock
 
 block content
     .search__header
         h3 Searching for: #{searchingBy}
+    .search__videos
+        each item in videos 
+            //- item 는 변수명이고 어떤 이름을 붙여도 괜찮음, video 배열에서 하나씩 template를 적용시키는 것 (iteration)
+            //-h1=video.title
+            //-p=video.description
+            +videoBlock({ 
+                title: item.title,
+                views: item.views,
+                videoFile: item.videoFile
+            })
